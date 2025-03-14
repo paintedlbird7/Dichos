@@ -10,4 +10,9 @@
 | Update  | `/users/:userId/dichos/:dichoId` | PUT   |
 | Delete  | `/users/:userId/dichos/:dichoId` | DELETE |
 
-![Alt text](assets/dichos.png)
+![Alt text](assets/site.png)
+
+![Alt text](assets/erd.jpg)
+
+
+
