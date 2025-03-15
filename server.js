@@ -12,6 +12,10 @@ const passUserToView = require('./middleware/pass-user-to-view.js');
 const authController = require('./controllers/auth.js');
 const dichosController = require('./controllers/dichos.js');
 
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 const port = process.env.PORT ? process.env.PORT : '3000';
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -32,6 +36,7 @@ app.use(
 );
 app.use(passUserToView); // use new passUserToView middleware here
 
+
 // app.get('/', (req, res) => {
 //   res.render('index.ejs', {
 //     user: req.session.user,
@@ -47,6 +52,7 @@ app.get('/', (req, res) => {
   } else {
     // Show the homepage for users who are not signed in
     res.render('index.ejs');
+    // res.render('dichos/index'); // This means the file is in views/dichos/index.ejs
   }
 });
 

@@ -1,13 +1,31 @@
-<!-- views/applications/index.ejs -->
+<!-- views/dichos/index.ejs 
+ http://localhost:3000/users/67d519654e4e53fcdad957c2/dichos
+ Homepage when user loggs in -->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css" /> -->
     <title>Your Quotes</title>
   </head>
-  <body>
-    <h1>Your Quotes</h1>
+  <body class="index-body">
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="all-apps-body">
+      <div class="all-apps-header">
+    <h1>Your Quotes Homepage</h1>
+    <a class="add-app-link" href="/users/<%=user._id%>/dichos/new">Add an App</a>
+  <!-- <h1>hello</h1> -->
+    <div class="index-container">
+      <div class="text-container">
+        <!-- <h1 class="main-header">Quotes1</h1> -->
+        <!-- <p class="subheader">A quotes tracker2.</p> -->
+      </div>
+      <!-- <div class="auth-links">
+        <a class="signup-link" href="/auth/sign-up">Sign Up</a>
+        <a class="signin-link" href="/auth/sign-in">Sign In</a>
+      </div> -->
+    </div>
   </body>
-</html>
+  </html>
