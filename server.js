@@ -47,7 +47,7 @@ app.use(passUserToView); // use new passUserToView middleware here
 app.get('/', (req, res) => {
   // Check if the user is signed in
   if (req.session.user) {
-    // Redirect signed-in users to their applications index
+    // Redirect signed-in users to their dichos index
     res.redirect(`/users/${req.session.user._id}/dichos`);
   } else {
     // Show the homepage for users who are not signed in
