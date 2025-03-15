@@ -12,10 +12,8 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
         <h1>Add a New Quote</h1>
-<!-- views/applications/new.ejs -->
 
-<form action="" method="">
-  
+<form action="/users/<%= user._id %>/dichos" method="POST">  
     <label for="title">Title:</label>
     <input type="text" name="title" id="title" />
   
