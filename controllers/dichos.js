@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-// TODO: left off Defining the route and coding the controller
+// TODO: left at 
 
 const User = require('../models/user.js');
 
@@ -33,7 +33,6 @@ router.get('/new', async (req, res) => {
 
   // controllers/applications.js`
 // POST form
-// TODO: check mongo atlas no data saved
 router.post('/', async (req, res) => {
     try {
       // Look up the user from req.session
@@ -50,6 +49,13 @@ router.post('/', async (req, res) => {
       console.log(error);
       res.redirect('/');
     }
+  });
+
+  // controllers/applications.js
+// GET gets each quote
+// TODO: doesn't get individual id
+router.get('/:dichoId', (req, res) => {
+    res.send(`here is your request param: ${req.params.dichoId}`);
   });
   
   

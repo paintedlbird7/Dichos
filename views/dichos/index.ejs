@@ -2,7 +2,6 @@
  http://localhost:3000/users/67d519654e4e53fcdad957c2/dichos
  Homepage when user loggs in -->
 
- <!-- TODO: fix should now be able to see a list of all of the applications you’ve created on this page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,9 +16,14 @@
       <div>
     <h1>Your Quotes Homepage</h1>
     <a href="/users/<%=user._id%>/dichos/new">Add a Quote</a>
-      <ul>
+    
         <% dichos.forEach((dicho)=>{ %>
-        <li><%= dicho.title %> <%= dicho.name %> <%= dicho.notes %></li>
+        <li>
+          <!-- Add a link around each application, directing to the 'show' page -->
+          <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>">
+            <%= dicho.title %> at <%= dicho.name %>
+          </a>
+        </li>
         <% }) %>
       </ul>
   </body>

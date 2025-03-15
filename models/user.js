@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// TODO: find out how to transfer master into the main branch
+// TODO: FIX: find out how to transfer master into the main branch
 
 const dichoSchema = new mongoose.Schema({
   name: {
