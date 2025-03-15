@@ -2,7 +2,6 @@
 
 const express = require('express');
 const router = express.Router();
-// TODO: left at 
 
 const User = require('../models/user.js');
 
@@ -53,10 +52,28 @@ router.post('/', async (req, res) => {
 
   // controllers/applications.js
 // GET gets each quote
-// TODO: doesn't get individual id
-router.get('/:dichoId', (req, res) => {
-    res.send(`here is your request param: ${req.params.dichoId}`);
+// controllers/applications.js
+
+router.get('/:dichoId', async (req, res) => {
+    try {
+      // Look up the user from req.session
+      const currentUser = await User.findById(req.session.user._id);
+      // Find the application by the applicationId supplied from req.params
+      const dicho = currentUser.dichos.id(req.params.dichoId);
+      // Render the show view, passing the application data in the context object
+      res.render('dichos/show.ejs', {
+        dicho: dicho,
+      });
+    } catch (error) {
+      // If any errors, log them and redirect back home
+      console.log(error);
+      res.redirect('/');
+    }
   });
+  
+// router.get('/:dichoId', (req, res) => {
+//     res.send(`here is your request param: ${req.params.dichoId}`);
+//   });
   
   
 module.exports = router;

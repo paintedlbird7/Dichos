@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= dicho.title %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= dicho.title %> <%= dicho.company %></h1>
+    <% if (dicho.notes) { %>
+    <p>Notes: <%= dicho.notes %></p>
+    <% } %> <% if (dicho.postingLink) { %>
+    <a href="<%= dicho.postingLink %>">View quote posting</a>
+    <% } %>
+    <p>Current Language: <%= dicho.status %></p>
+  </body>
+</html>
