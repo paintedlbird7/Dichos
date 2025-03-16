@@ -1,4 +1,4 @@
-
+<!-- views/dichos/show.ejs-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,5 +15,12 @@
     <a href="<%= dicho.postingLink %>">View quote posting</a>
     <% } %>
     <p>Current Language: <%= dicho.status %></p>
+    <!-- We'll use method-override to allow us to hit a delete route: -->
+    <form
+      action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=DELETE"
+      method="POST"
+    >
+      <button type="submit">Delete this quote</button>
+    </form>
   </body>
 </html>

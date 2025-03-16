@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       // Look up the user from req.session
       const currentUser = await User.findById(req.session.user._id);
       // Render index.ejs, passing in all of the current user's
-      // applications as data in the context object.
+      // dichos as data in the context object.
       res.render('dichos/index.ejs', {
         dichos: currentUser.dichos,
       });
@@ -30,18 +30,18 @@ router.get('/new', async (req, res) => {
   });
 
 
-  // controllers/applications.js`
+  // controllers/dichos.js`
 // POST form
 router.post('/', async (req, res) => {
     try {
       // Look up the user from req.session
       const currentUser = await User.findById(req.session.user._id);
       // Push req.body (the new form data object) to the
-      // applications array of the current user
+      // dichos array of the current user
       currentUser.dichos.push(req.body);
       // Save changes to the user
       await currentUser.save();
-      // Redirect back to the applications index view
+      // Redirect back to the dichos index view
       res.redirect(`/users/${currentUser._id}/dichos`);
     } catch (error) {
       // If any errors, log them and redirect back home
@@ -50,17 +50,17 @@ router.post('/', async (req, res) => {
     }
   });
 
-  // controllers/applications.js
+  // controllers/dichos.js
 // GET gets each quote
-// controllers/applications.js
+// controllers/dichos.js
 
 router.get('/:dichoId', async (req, res) => {
     try {
       // Look up the user from req.session
       const currentUser = await User.findById(req.session.user._id);
-      // Find the application by the applicationId supplied from req.params
+      // Find the dicho by the dichoId supplied from req.params
       const dicho = currentUser.dichos.id(req.params.dichoId);
-      // Render the show view, passing the application data in the context object
+      // Render the show view, passing the dicho data in the context object
       res.render('dichos/show.ejs', {
         dicho: dicho,
       });
@@ -74,6 +74,25 @@ router.get('/:dichoId', async (req, res) => {
 // router.get('/:dichoId', (req, res) => {
 //     res.send(`here is your request param: ${req.params.dichoId}`);
 //   });
-  
+
+// DELETE
+router.delete('/:dichoId', async (req, res) => {
+  try {
+    // Look up the user from req.session
+    const currentUser = await User.findById(req.session.user._id);
+    // Use the Mongoose .deleteOne() method to delete
+    // an dicho using the id supplied from req.params
+    currentUser.dichos.id(req.params.dichoId).deleteOne();
+    // Save changes to the user
+    await currentUser.save();
+    // Redirect back to the dichos index view
+    res.redirect(`/users/${currentUser._id}/dichos`);
+  } catch (error) {
+    // If any errors, log them and redirect back home
+    console.log(error);
+    res.redirect('/');
+  }
+});
+
   
 module.exports = router;
