@@ -1,4 +1,4 @@
-## Application Routes
+## Quote Routes
 
 | Action  | Route | HTTP Verb |
 |---------|--------------------------------------|-----------|

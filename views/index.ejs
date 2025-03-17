@@ -1,14 +1,19 @@
 <!-- views/index.ejs localhost/3000 the main login sign up page-->
+<!-- Main page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Quotes Title</title>
   </head>
   <body>
-    <%- include('partials/_navbar.ejs') %>
+    <div class="card-panel" style="max-width: 800px; margin: 40px auto; padding: 40px;">
+      <%- include('partials/_navbar.ejs') %>
     <h1>Quotes</h1>
     <p>A quotes tracker.</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

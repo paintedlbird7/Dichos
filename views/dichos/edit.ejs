@@ -1,0 +1,44 @@
+<!-- views/dichos/edit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Editing <%= dicho.title %>
+  </title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit <%= dicho.title %> 
+      <!-- <%= dicho.name %> -->
+    </h1>
+    <form action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=PUT" method="POST">
+      <!-- <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= dicho.name %>"> -->
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" value="<%= dicho.title %>">
+      <label for="notes">Notes:</label>
+      <textarea name="notes" id="notes"><%= dicho.notes %></textarea>
+      <!-- <label for="postingLink">Posting Link:</label> -->
+      <!-- <input type="text" name="postingLink" id="postingLink" value="<%= dicho.postingLink %>"> -->
+      <!-- <label for="status">Status:</label> -->
+      <!-- <select id="status" name="status">
+        <option value="english" <%=dicho.status==="english" ? "selected" : "" %>
+          >
+          English
+        </option>
+        <option value="spanish" <%=dicho.status==="spanish" ? "selected" : "" %>
+          >
+          Spanish
+        </option>
+      </select> -->
+      <button type="submit">Update Quote</button>
+    </form>
+</body>
+
+</html>

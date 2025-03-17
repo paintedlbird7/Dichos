@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-// TODO: FIX: find out how to transfer master into the main branch
 
 const dichoSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
+  // name: {
+  //   type: String,
+  //   required: true,
+  // },
   title: {
     type: String,
     required: true,
@@ -16,10 +15,10 @@ const dichoSchema = new mongoose.Schema({
   postingLink: {
     type: String,
   },
-  status: {
-    type: String,
-    enum: ['english', 'spanish'],
-  },
+  // status: {
+  //   type: String,
+  //   enum: ['english', 'spanish'],
+  // },
 });
 
 const userSchema = mongoose.Schema({

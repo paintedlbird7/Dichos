@@ -14,7 +14,10 @@
     <% } %> <% if (dicho.postingLink) { %>
     <a href="<%= dicho.postingLink %>">View quote posting</a>
     <% } %>
-    <p>Current Language: <%= dicho.status %></p>
+    <!-- <p>Current Language: <%= dicho.status %></p> -->
+    <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>/edit">
+      Edit this quote 
+    </a>
     <!-- We'll use method-override to allow us to hit a delete route: -->
     <form
       action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=DELETE"
