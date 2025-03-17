@@ -4,18 +4,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= dicho.title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/public/stylesheets/style.css"> <!-- Link to your custom CSS -->
+  
+  <title><%= dicho.title %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= dicho.title %> <%= dicho.company %></h1>
     <% if (dicho.notes) { %>
-    <p>Notes: <%= dicho.notes %></p>
+    <p>By: <%= dicho.notes %></p>
     <% } %> <% if (dicho.postingLink) { %>
     <a href="<%= dicho.postingLink %>">View quote posting</a>
     <% } %>
     <!-- <p>Current Language: <%= dicho.status %></p> -->
-    <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>/edit">
+    <!-- TODO: find out why i can't move this buttons -->
+    <div class="button-container">
+      <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>/edit" class="btn red lighten-2">
       Edit this quote 
     </a>
     <!-- We'll use method-override to allow us to hit a delete route: -->
@@ -23,7 +29,9 @@
       action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=DELETE"
       method="POST"
     >
-      <button type="submit">Delete this quote</button>
+      <button type="submit" class="btn red lighten-2">Delete this quote</button>
     </form>
+  </div>
+
   </body>
 </html>

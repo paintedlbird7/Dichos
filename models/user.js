@@ -36,3 +36,7 @@ const userSchema = mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
+
+// FIX TODO: why the card gets bigger when i type in extra line in the quote section.  
+// find out how to make it a fixed card.
+
