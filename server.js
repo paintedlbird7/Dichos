@@ -10,6 +10,7 @@ const isSignedIn = require("./middleware/is-signed-in.js");
 const passUserToView = require("./middleware/pass-user-to-view.js");
 const authController = require("./controllers/auth.js");
 const dichosController = require("./controllers/dichos.js");
+const usersController = require("./controllers/usersController");
 
 const path = require("path");
 app.set("views", path.join(__dirname, "views"));
@@ -42,6 +43,8 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
   }
 });
+
+app.get("/users", usersController.getAllUsers);
 
 app.use("/auth", authController);
 app.use(isSignedIn);
