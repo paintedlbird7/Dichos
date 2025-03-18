@@ -1,4 +1,4 @@
-<!-- views/dichos/show.ejs-->
+<!-- views/dichos/show.ejs Show a individual quote -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,25 +22,25 @@
           <div class="card">
             <div class="card-content">
               <span class="card-title red-text text-darken-2"><%= dicho.title %></span>
-              <% if (dicho.company) { %>
-                <p class="grey-text">Company: <%= dicho.company %></p>
+              <% if (dicho.name) { %>
+                <p class="grey-text">Name: <%= dicho.name %></p>
               <% } %>
               <% if (dicho.notes) { %>
                 <p><strong>By:</strong> <%= dicho.notes %></p>
               <% } %>
-              <% if (dicho.postingLink) { %>
+              <!-- <% if (dicho.postingLink) { %>
                 <p><a href="<%= dicho.postingLink %>" target="_blank">View quote posting</a></p>
-              <% } %>
+              <% } %> -->
             </div>
             
             <div class="card-action">
               <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>/edit" class="btn red lighten-2">
-                <i class="material-icons left">edit</i>Edit
+                <i class="material-icons left" alt="pencil to edit">edit</i>Edit
               </a>
               
               <form action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=DELETE" method="POST" style="display:inline;">
                 <button type="submit" class="btn red lighten-2">
-                  <i class="material-icons left">delete</i>Delete
+                  <i class="material-icons left" alt="trash can to delete">delete</i>Delete
                 </button>
               </form>
             </div>
