@@ -17,14 +17,10 @@
       <!-- <%= dicho.name %> -->
     </h1>
     <form action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=PUT" method="POST">
-      <!-- <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="<%= dicho.name %>"> -->
       <label for="title">Quote/ Dicho:</label>
       <input type="text" name="title" id="title" value="<%= dicho.title %>">
       <label for="notes">By:</label>
       <textarea name="notes" id="notes"><%= dicho.notes %></textarea>
-      <!-- <label for="postingLink">Posting Link:</label> -->
-      <!-- <input type="text" name="postingLink" id="postingLink" value="<%= dicho.postingLink %>"> -->
       <!-- <label for="status">Status:</label> -->
       <!-- <select id="status" name="status">
         <option value="english" <%=dicho.status==="english" ? "selected" : "" %>
@@ -39,5 +35,5 @@
       <button type="submit" class="btn red lighten-2">Update Quote</button>
     </form>
 </body>
-
 </html>
+<!-- TODO: FIX why I can't see the status -->

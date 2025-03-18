@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const dichoSchema = new mongoose.Schema({
-  // name: {
-  //   type: String,
-  //   required: true,
-  // },
   title: {
     type: String,
     required: true,
@@ -30,10 +26,9 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  dichos: [dichoSchema], // Embedded schema as an array
+  dichos: [dichoSchema],
 });
 
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
-// 3 FIX TODO: why the card gets bigger when i type in extra line in the quote section find out how to make it a fixed card.

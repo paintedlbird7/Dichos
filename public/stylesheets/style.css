@@ -3,22 +3,16 @@
 .nav-links {
   border: 1px solid black;
   display: flex;
-  /* gap: 5px; Adds spacing between the links */
-/* padding-left: 15px; */
 }
 
 .authlink {
-  /* border: 1px solid black;margin-left: 20px; */
   padding-left: 15px;
 }
 
 footer {
-  /* border: 1px solid black; */
-  background-color: white; /* Transparent gray */
+  background-color: white;
   color: grey;
   text-align: center;
-  /* padding: 8px; */
-  /* padding-right: 1000px; */
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -38,9 +32,7 @@ footer a:hover {
 
 
 .button-container {
-  /* border: 5px solid black; */
   display: flex;
   gap: 10px;
   align-items: center;
 }
-
