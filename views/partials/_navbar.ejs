@@ -1,34 +1,31 @@
 <!-- views/partials/_navbar.ejs -->
+
 <body>
-    <link rel="stylesheet" href="/public//stylesheets//style.css" />
-    </body>
-  <nav>
-    <% if(user) { %>
+  <link rel="stylesheet" href="/public//stylesheets//style.css" />
+</body>
+<nav>
+  <% if(user) { %>
     <!-- <div class="navbar"> -->
-      <!-- <h1 id="nav-header">Quotes</h1> -->
-      <div class="nav-links">
-        <a class="authlink" href="/users/<%=user._id%>/dichos"
-          >Your Quotes</a
-        >
-        <a class="authlink" href="/auth/sign-out">Sign Out</a>
-        <!-- <a class="authlink" href="/auth/sign-out">
+    <!-- <h1 id="nav-header">Quotes</h1> -->
+    <div class="nav-links">
+      <a class="authlink" href="/users/<%=user._id%>/dichos">Your Quotes</a>
+      <a class="authlink" href="/auth/sign-out">Sign Out</a>
+      <!-- <a class="authlink" href="/auth/sign-out">
           <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f">
             <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/>
           </svg>
           Sign Out
         </a> -->
-        
-      </div>
+
+    </div>
     </div>
     <% } else { %>
-    <div class="navbar">
-      <!-- <h1 id="nav-header">Quotes</h1> -->
-      <div class="nav-links">
-        <a class="authlink" href="/auth/sign-in">Sign In</a>
-        <a class="authlink" href="/auth/sign-up">Sign Up</a>
+      <div class="navbar">
+        <!-- <h1 id="nav-header">Quotes</h1> -->
+        <div class="nav-links">
+          <a class="authlink" href="/auth/sign-in">Sign In</a>
+          <a class="authlink" href="/auth/sign-up">Sign Up</a>
+        </div>
       </div>
-    </div>
-    <% } %>
-  </nav>
-  
-    
+      <% } %>
+</nav>
