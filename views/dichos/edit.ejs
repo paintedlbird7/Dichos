@@ -1,5 +1,3 @@
-<!-- views/dichos/edit.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,32 +6,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <title>Editing <%= dicho.title %>
-  </title>
+  <title>Editing <%= dicho.title %></title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit: <%= dicho.title %> 
-      <!-- <%= dicho.name %> -->
-    </h1>
-    <form action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=PUT" method="POST">
-      <label for="title">Quote/ Dicho:</label>
-      <input type="text" name="title" id="title" value="<%= dicho.title %>">
-      <label for="notes">By:</label>
-      <textarea name="notes" id="notes"><%= dicho.notes %></textarea>
-      <!-- <label for="status">Status:</label> -->
-      <!-- <select id="status" name="status">
-        <option value="english" <%=dicho.status==="english" ? "selected" : "" %>
-          >
-          English
-        </option>
-        <option value="spanish" <%=dicho.status==="spanish" ? "selected" : "" %>
-          >
-          Spanish
-        </option>
-      </select> -->
-      <button type="submit" class="btn red lighten-2">Update Quote</button>
-    </form>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m8 offset-m2">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title center-align red-text text-darken-2">Edit Quote</span>
+            
+            <form action="/users/<%= user._id %>/dichos/<%= dicho._id %>?_method=PUT" method="POST">
+              <div class="input-field">
+                <label for="title" class="active">Quote / Dicho:</label>
+                <input type="text" name="title" id="title" value="<%= dicho.title %>" required>
+              </div>
+              
+              <div class="input-field">
+                <label for="notes" class="active">By:</label>
+                <textarea name="notes" id="notes" class="materialize-textarea" required><%= dicho.notes %></textarea>
+              </div>
+
+              <div class="input-field">
+                <label for="status" class="active">Language:</label>
+                <select id="status" name="status" class="browser-default">
+                  <option value="english" <%= dicho.status === "english" ? "selected" : "" %>>English</option>
+                  <option value="spanish" <%= dicho.status === "spanish" ? "selected" : "" %>>Spanish</option>
+                </select>
+              </div>
+
+              <div class="center-align">
+                <button type="submit" class="btn red lighten-2">Update Quote</button>
+                <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>" class="btn grey lighten-1">Cancel</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="center-align">
+    <p>2025 Rosa Perez | Painted Bird Designs
+      <a href="https://github.com/paintedlbird7" target="_blank">GitHub</a> |
+      <a href="https://www.rosapérez.com">Portfolio</a>
+    </p>
+  </footer>
 </body>
 </html>
-<!-- TODO: FIX why I can't see the status -->

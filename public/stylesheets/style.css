@@ -1,7 +1,10 @@
 /* public/stylesheets/style.css */
 
+.container {
+  margin-top: 50px;
+}
 .nav-links {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
 }
 

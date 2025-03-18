@@ -11,10 +11,10 @@ const dichoSchema = new mongoose.Schema({
   postingLink: {
     type: String,
   },
-  // status: {
-  //   type: String,
-  //   enum: ['english', 'spanish'],
-  // },
+  status: {
+    type: String,
+    enum: ['english', 'spanish'],
+  },
 });
 
 const userSchema = mongoose.Schema({
