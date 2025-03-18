@@ -40,7 +40,6 @@ Frontend deployed using [Heroku Pages](https://)
 ### Clone this repository and navigate into it  
 
 ```git clone https://github.com/paintedlbird7/Dichos/tree/master && /Dichos/tree/master```
-<!-- TODO: ask if this is correct? -->
 
 ## Documentation  
 
