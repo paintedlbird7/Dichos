@@ -53,8 +53,6 @@ app.use("/users/:userId/dichos", dichosController);
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
-// TODO: move the footer to the center
-// TODO: FIX why I can't see the status -->
 // TODO: ADD website icon to the corner of site
 // TODO: why the card gets bigger when i type in extra line in the quote section find out how to make it a fixed card.
 

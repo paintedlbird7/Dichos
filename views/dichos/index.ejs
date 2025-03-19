@@ -33,6 +33,9 @@
                 </p>
                 <p class="grey-text"> By <%= dicho.notes %>
                 </p>
+                <p>
+                  <%= dicho.status %>
+                </p>
               </div>
               <div class="card-action">
                 <a href="/users/<%= user._id %>/dichos/<%= dicho._id %>" class="red-text">View</a>
@@ -54,4 +57,5 @@
       </p>
     </footer>
 </body>
+
 </html>
