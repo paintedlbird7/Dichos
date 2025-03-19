@@ -13,11 +13,9 @@ Check out the application [here](https://)
 | **Heroku Pages**     | [View Deployed App](https:) |
 | **GitHub Repo**      | [View Repository](https://github.com/paintedlbird7/Dichos) |
 
-<!--  
-![Landing Page](images/)  
-![Dichos Homepage](images/)  
-![Individual Page](images/)  
--->
+  
+![Landing Page](assets/images/LandingPage.png)  
+![Dichos Homepage](assets/images/HomePage.png)
 
 ### Key Features  
 
@@ -26,6 +24,7 @@ Check out the application [here](https://)
 - Users can read their quotes displayed on the screen.  
 - Users can update a quote’s name, translate a quote, or edit the author’s name.  
 - Users can delete a quote.  
+- Users can see other registered Users
 
 ## Tech Stack  
 
