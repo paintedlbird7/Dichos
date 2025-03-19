@@ -80,17 +80,10 @@ router.get("/:dichoId/edit", async (req, res) => {
 // PUT/ EDIT
 router.put("/:dichoId", async (req, res) => {
   try {
-    // Find the user from req.session
     const currentUser = await User.findById(req.session.user._id);
-    // Find the current dicho from the id supplied by req.params
     const dicho = currentUser.dichos.id(req.params.dichoId);
-    // Use the Mongoose .set() method
-    // this method updates the current dicho to reflect the new form
-    // data on `req.body`
     dicho.set(req.body);
-    // Save the current user
     await currentUser.save();
-    // Redirect back to the show view of the current dicho
     res.redirect(`/users/${currentUser._id}/dichos/${req.params.dichoId}`);
   } catch (error) {
     console.log(error);

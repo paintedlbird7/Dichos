@@ -5,12 +5,10 @@
 </body>
 <nav>
   <% if(user) { %>
-    <!-- <div class="navbar"> -->
     <div class="nav-links">
       <a class="authlink" href="/users/<%=user._id%>/dichos">Your Quotes</a>
       <a class="authlink" href="/auth/sign-out">Sign Out</a>
       <li><a href="/users">Users</a></li>
-
     </div>
     </div>
     <% } else { %>
