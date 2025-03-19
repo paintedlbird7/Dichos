@@ -14,6 +14,8 @@ const usersController = require("./controllers/usersController");
 
 const path = require("path");
 app.set("views", path.join(__dirname, "views"));
+// app.use(express.static(path.join(__dirname, 'public')));
+
 app.set("view engine", "ejs");
 
 const port = process.env.PORT ? process.env.PORT : "3000";
@@ -26,7 +28,7 @@ mongoose.connection.on("connected", () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
-app.use(express.static("public")); // for CSS
+// app.use(express.static("public")); // for CSS
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -46,9 +48,26 @@ app.get("/", (req, res) => {
 
 app.get("/users", usersController.getAllUsers);
 
+app.get("/users/:id", (req, res) => {
+  const userId = req.params.id;
+  User.findById(userId)
+    .then(user => {
+      res.render("users/show", { user });
+    })
+    .catch(err => {
+      console.error("Error fetching user:", err);
+      res.status(500).send("Server error");
+    });
+});
+
 app.use("/auth", authController);
 app.use(isSignedIn);
 app.use("/users/:userId/dichos", dichosController);
+
+app.use((req, res) => {
+  res.status(404).send("Page Not Found");
+});
+
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
