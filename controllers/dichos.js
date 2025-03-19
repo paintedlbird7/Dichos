@@ -13,7 +13,6 @@ router.get("/", async (req, res) => {
       dichos: currentUser.dichos,
     });
   } catch (error) {
-    console.log(error);
     res.redirect("/");
   }
 });
@@ -31,7 +30,6 @@ router.post("/", async (req, res) => {
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/dichos`);
   } catch (error) {
-    console.log(error);
     res.redirect("/");
   }
 });
@@ -45,7 +43,6 @@ router.get("/:dichoId", async (req, res) => {
       dicho: dicho,
     });
   } catch (error) {
-    console.log(error);
     res.redirect("/");
   }
 });
@@ -58,7 +55,6 @@ router.delete("/:dichoId", async (req, res) => {
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/dichos`);
   } catch (error) {
-    console.log(error);
     res.redirect("/");
   }
 });
@@ -72,7 +68,6 @@ router.get("/:dichoId/edit", async (req, res) => {
       dicho: dicho,
     });
   } catch (error) {
-    console.log(error);
     res.redirect("/");
   }
 });
@@ -86,7 +81,6 @@ router.put("/:dichoId", async (req, res) => {
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/dichos/${req.params.dichoId}`);
   } catch (error) {
-    console.log(error);
     res.redirect("/");
   }
 });

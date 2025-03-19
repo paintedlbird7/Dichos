@@ -21,7 +21,6 @@ const port = process.env.PORT ? process.env.PORT : "3000";
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
-  console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -34,7 +33,7 @@ app.use(
     saveUninitialized: true,
   })
 );
-app.use(passUserToView); // use new passUserToView middleware here
+app.use(passUserToView);
 
 app.get("/", (req, res) => {
   if (req.session.user) {
@@ -53,6 +52,7 @@ app.use("/users/:userId/dichos", dichosController);
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
+// TODO: fix error in console
 // TODO: ADD website icon to the corner of site
 // TODO: why the card gets bigger when i type in extra line in the quote section find out how to make it a fixed card.
 

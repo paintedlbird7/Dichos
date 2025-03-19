@@ -1,3 +1,4 @@
+<!-- All Users card -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/style.css">
+  
   <title>All Users</title>
 </head>
 <body>
@@ -17,10 +19,19 @@
     <div class="row">
       <% users.forEach((user) => { %>
         <div class="col s12 m6 l4">
-          <div class="card">
+          
+            <div class="card">
             <div class="card-content center-align">
-              <span class="card-title"><%= user.username %></span>
-            </div>
+                <span class="card-title">
+                    <!-- <a href="/users/<%= user._id %>"><%= user.username %></a> -->
+                    <a href="/users/<%= user._id %>" class="user-card">
+                        <div>
+                          <h3><%= user.username %></h3>
+                          <!-- <p><%= user.dichos ? user.dichos.length : 0 %> quotes</p> -->
+                        </div>
+                      </a>  
+                </span>            
+                </div>
           </div>
         </div>
       <% }) %>
@@ -33,6 +44,15 @@
       <a href="https://www.rosapérez.com">Portfolio</a>
     </p>
   </footer>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".user-card").forEach(card => {
+        card.addEventListener("click", (event) => {
+            event.preventDefault();
+        });
+      });
+    });
+  </script>
+  
 </body>
 </html>
