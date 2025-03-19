@@ -8,9 +8,6 @@ const dichoSchema = new mongoose.Schema({
   notes: {
     type: String,
   },
-  postingLink: {
-    type: String,
-  },
   status: {
     type: String,
     enum: ['english', 'spanish'],
