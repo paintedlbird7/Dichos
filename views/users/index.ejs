@@ -27,7 +27,12 @@
                     <a href="/users/<%= user._id %>" class="user-card">
                         <div>
                           <h3><%= user.username %></h3>
-                          <!-- <p><%= user.dichos ? user.dichos.length : 0 %> quotes</p> -->
+                          <p><%= user.dichos ? user.dichos.length : 0 %> quotes</p>
+                          <ul>
+                            <% user.dichos.forEach((dicho) => { %>
+                              <li><%= dicho.title %></li> <!-- Display each dicho -->
+                            <% }) %>
+                          </ul>
                         </div>
                       </a>  
                 </span>            
