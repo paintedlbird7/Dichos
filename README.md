@@ -4,13 +4,13 @@
 
 Dichos is an app that allows users to post, delete, edit, and read their favorite quotes and proverbs in Spanish, with English translations.  
 
-Check out the application [here](https://)  
+Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)  
 
 | **Resource**         | **Link** |
 |----------------------|------|
 | **Product Canvas**   | [View Product Canvas](https://docs.google.com/document/d/1-sXK59yFZNc_QD_P5M6qApEwut9YyZf1k2RbvTNneYk/edit?tab=t.0#heading=h.yjkq4hd1mfwt) |
 | **Trello Board**     | [View Trello Board](https://trello.com/b/qb8G32KS/dichos-project-unit-2) |
-| **Heroku Pages**     | [View Deployed App](https:) |
+| **Heroku Pages**     | [View Deployed App](https://dichos-e7267d865f38.herokuapp.com/) |
 | **GitHub Repo**      | [View Repository](https://github.com/paintedlbird7/Dichos) |
 
   
@@ -33,22 +33,12 @@ Check out the application [here](https://)
 
 ### Backend built using:  
 - MongoDB  
-
-Frontend deployed using [Heroku Pages](https://)  
+  
 
 ### Clone this repository and navigate into it  
 
 ```git clone https://github.com/paintedlbird7/Dichos/tree/master && /Dichos/tree/master```
-
-## Documentation  
-
-This application is deployed on [Heroku Pages](https://).  
-
----
-
-## Frameworks & Libraries  
-
-<!-- - What 3rd party frameworks/libraries are you using? -->
+  
 
 ## Attributes  
 
@@ -56,7 +46,7 @@ This application is deployed on [Heroku Pages](https://).
 
 ## Next Up  
 
-- Localization (l10n)  
+- Users can see other people's quotes in their profile  
 
 ## Contributors  
 
@@ -66,8 +56,7 @@ This application is deployed on [Heroku Pages](https://).
 |----------------------|------|
 | **Product Canvas**   | [View Product Canvas](https://docs.google.com/document/d/1-sXK59yFZNc_QD_P5M6qApEwut9YyZf1k2RbvTNneYk/edit?tab=t.0#heading=h.yjkq4hd1mfwt) |
 | **Trello Board**     | [View Trello Board](https://trello.com/b/qb8G32KS/dichos-project-unit-2) |
-| **Heroku Pages**     | [View Deployed App](https:) |
+| **Heroku Pages**     | [View Deployed App](https://dichos-e7267d865f38.herokuapp.com/) |
 | **GitHub Repo**      | [View Repository](https://github.com/paintedlbird7/Dichos) |
 
-Check out the application [here](https://)  
-  
+Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)  
