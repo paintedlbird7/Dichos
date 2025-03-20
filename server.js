@@ -34,6 +34,7 @@ app.use(
   })
 );
 app.use(passUserToView);
+app.use(express.static('public'));
 
 app.get("/", (req, res) => {
   if (req.session.user) {
@@ -52,7 +53,3 @@ app.use("/users/:userId/dichos", dichosController);
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
-// TODO: fix error in console
-// TODO: ADD website icon to the corner of site
-// TODO: why the card gets bigger when i type in extra line in the quote section find out how to make it a fixed card.
-

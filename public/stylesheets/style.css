@@ -3,6 +3,7 @@
 .container {
   margin-top: 50px;
 }
+
 .nav-links {
   display: flex;
 }
@@ -10,6 +11,14 @@
 .authlink {
   padding-left: 15px;
 }
+
+.user-card ul li {
+  font-size: 1.2rem;         /* Match title font size */
+  color: grey;            /* Match title color */
+  margin-bottom: 8px;
+  text-align: center;
+}
+
 
 footer {
     /* border: 1px solid black; */

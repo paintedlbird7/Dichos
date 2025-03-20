@@ -24,7 +24,7 @@ Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)
 - Users can read their quotes displayed on the screen.  
 - Users can update a quote’s name, translate a quote, or edit the author’s name.  
 - Users can delete a quote.  
-- Users can see other registered Users
+- Users can see other registered Users and see their quotes and the number of quotes they have.
 
 ## Tech Stack  
 
@@ -46,7 +46,7 @@ Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)
 
 ## Next Up  
 
-- Users can see other people's quotes in their profile  
+- Users can click on other people's quotes in their profile  
 
 ## Contributors  
 
