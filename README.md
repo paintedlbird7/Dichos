@@ -44,10 +44,10 @@ Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)
 ## Tech Stack  
 
 ### Frontend built using:  
-- JavaScript, EJS  
+- JavaScript, EJS, CSS, Material CSS 
 
 ### Backend built using:  
-- MongoDB  
+- MongoDB, Express
   
 
 ### Clone this repository and navigate into it  
