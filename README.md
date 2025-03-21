@@ -6,6 +6,21 @@ Dichos is an app that allows users to post, delete, edit, and read their favorit
 
 Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)  
 
+## Application Routes
+
+| Action  | Route | HTTP Verb |
+|---------|--------------------------------------|-----------|
+| Index   | `/users/:userId/dichos`       | GET       |
+| New     | `/users/:userId/dichos/new`   | GET       |
+| Create  | `/users/:userId/dichos`       | POST      |
+| Show    | `/users/:userId/dichos/:dichoId` | GET   |
+| Edit    | `/users/:userId/dichos/:dichoId/edit` | GET  |
+| Update  | `/users/:userId/dichos/:dichoId` | PUT   |
+| Delete  | `/users/:userId/dichos/:dichoId` | DELETE |
+
+
+
+
 | **Resource**         | **Link** |
 |----------------------|------|
 | **Product Canvas**   | [View Product Canvas](https://docs.google.com/document/d/1-sXK59yFZNc_QD_P5M6qApEwut9YyZf1k2RbvTNneYk/edit?tab=t.0#heading=h.yjkq4hd1mfwt) |
