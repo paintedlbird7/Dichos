@@ -75,3 +75,15 @@ Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)
 | **GitHub Repo**      | [View Repository](https://github.com/paintedlbird7/Dichos) |
 
 Check out the application [here](https://dichos-e7267d865f38.herokuapp.com/)  
+
+#### Add Neccessary Environment Viariable
+
+- npm i
+
+#### Start the Application
+
+`nodemon`
+
+### Frameworks
+
+Material CSS
